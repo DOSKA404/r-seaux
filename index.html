@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+            <div class="picture">
+                <img src="GitHub-Mark-120px-plus.png">
+            </div>
+            <H1>My Github</H1>
+            <p>see all my repository on github</p>
+            <a href="https://github.com/DOSKA404">Lets Go!</a>
+        </div>
+    </div>
+    <div class="card2">    
+        <div class="content2">
+            <div class="picture2">
+                <img src="kisspng-computer-icons-clip-art-twitter-logo-vector-5b5693f7ca66a0.2797760715324006318291.png">
+            </div>
+            <H1>My Twitter</H1>
+            <p>watch my tweet</p>
+            <a href="https://twitter.com/RandomDoska">Lets Go!</a>
+        </div>
+    </div>
+    <div class="card3">   
+        <div class="content3">
+            <div class="picture3">
+                <img src="youtube(1).png">
+            </div>
+            <H1>My Youtube</H1>
+            <p>no video for the moment <br>
+                video coming soon</p>
+            <a href="https://www.youtube.com/channel/UCZEur0J6d2TGNUU98kf8A8A">Lets Go!</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <script src="anime.min.js"></script>
+       
+       <script>
+            const container = document.querySelector('.container');
+            for (var i = 1; i <= 100 ; i++){
+                const blocks = document.createElement('div');
+                blocks.classList.add('block');
+                container.appendChild(blocks);
+            }
+
+            function generate(){
+                anime({
+                    targets: '.block',
+                    translateX: function(){
+                        return anime.random(-700,700)
+                    },
+                    translateY: function(){
+                        return anime.random(-700,700)
+                    },
+                    scale: function(){
+                        return anime.random(1,5)
+                    }
+                })
+            }
+            generate()
+        </script>
+    </div>
+</body>
+</html>
